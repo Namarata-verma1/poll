@@ -1,0 +1,36 @@
+{% extends "pheaderfooter.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block main %}
+
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Available Polls For Polling</h3>
+            </div>
+                
+            <ul class="list-group">
+               
+
+                {% for i in data  %}
+                <li class="list-group-item">
+                    <strong>{{ i.poll.question }}</strong>
+                    <span class="pull-right">
+                        <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a> &nbsp;
+						<li class="product design" style="margin-left:70px ;">
+							
+                        		
+							
+						</li>
+					  <!-- Product /- -->
+					{% endfor %} 
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

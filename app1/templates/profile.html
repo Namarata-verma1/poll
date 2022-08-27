@@ -1,0 +1,39 @@
+{% extends "headerfooter.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Profile of User{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto py-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1>My Details</h1>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <td>{{ user.cust_name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Gmail</th>
+                                <td>{{ user.cust_email}} </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Mobile No</th>
+                                <td>{{ user.cust_m_no}} </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
